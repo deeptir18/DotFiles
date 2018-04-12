@@ -31,6 +31,8 @@ Plugin 'reedes/vim-pencil'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'justinmk/vim-syntax-extra'
 
 """A lot of this is from frank! thanks frank
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,7 +83,7 @@ set mouse=a
 set cursorline
 highlight CursorLine guibg=Grey
 
-set tabstop=8
+set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
