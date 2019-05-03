@@ -7,45 +7,48 @@ filetype off
 " set the runtime path to include Vundle and initialize
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+call plug#begin('~/.vim/plugged')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
+" => Plugs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Bundle 'jlanzarotta/bufexplorer'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'godlygeek/tabular'
-Plugin 'reedes/vim-pencil'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-"Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'lervag/vimtex'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/html5-syntax.vim'
-Plugin 'mattn/emmet-vim' "html and css
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rust-lang/rust.vim'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'kamwitsta/nordisk'
-Plugin 'cloud-oak/vim-colors-alchemy'
-Plugin 'dracula/vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'godlygeek/tabular'
+Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+"Plug 'inkarkat/vim-spellcheck'
+"Plug 'kien/rainbow_parentheses.vim'
+Plug 'lervag/vimtex'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/html5-syntax.vim'
+Plug 'mattn/emmet-vim' "html and css
+Plug 'Valloric/YouCompleteMe'
+Plug 'rust-lang/rust.vim'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+Plug 'kamwitsta/nordisk'
+Plug 'cloud-oak/vim-colors-alchemy'
+Plug 'dracula/vim'
 
 """A lot of this is from frank! thanks frank
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()            " required
+"call vundle#end()            " required
+call plug#end()
 syntax enable
 filetype plugin indent on    " required
 set background=dark
@@ -54,7 +57,7 @@ let g:solarized_termtrans = 1
 let g:solarized_termcolors=16
 "colorscheme solarized
 colorscheme nord
-
+au BufNewFile,BufRead,BufReadPost *.tex setlocal spell spelllang=en_us
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline (powerline)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,12 +118,16 @@ set tm=500
 
 " Linebreak on 500 characters
 set lbr
-set tw=80
+set tw=200
 
 "set ai "Auto indent
 "set si "Smart indent
 set wrap "Wrap lines
 
+" Make ctrl+backspace delete previous word in insert mode
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+imap <C-BS> <C-W>
 
 
 " Highlight
