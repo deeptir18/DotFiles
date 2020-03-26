@@ -22,8 +22,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # rust
 curl https://sh.rustup.rs -sSf | sh
+$HOME/.cargo/env
 
-
-
-
+# source
+source ~/.bashrc
+source ~/.zshrc
 
