@@ -41,7 +41,7 @@ Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'kamwitsta/nordisk'
 Plug 'cloud-oak/vim-colors-alchemy'
 Plug 'dracula/vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 
