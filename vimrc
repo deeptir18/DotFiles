@@ -21,28 +21,27 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'godlygeek/tabular'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
+Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'inkarkat/vim-spellcheck'
 "Plug 'kien/rainbow_parentheses.vim'
-"Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/html5-syntax.vim'
 Plug 'mattn/emmet-vim' "html and css
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'rust-lang/rust.vim'
 Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'kamwitsta/nordisk'
 Plug 'cloud-oak/vim-colors-alchemy'
 Plug 'dracula/vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 
@@ -58,8 +57,8 @@ set background=dark
 set t_Co=16
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
-"colorscheme solarized
-colorscheme nord
+colorscheme solarized
+"colorscheme nord
 au BufNewFile,BufRead,BufReadPost *.tex setlocal spell spelllang=en_us
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline (powerline)
@@ -134,7 +133,7 @@ set tm=80
 
 " Linebreak on 500 characters
 set lbr
-set tw=200
+set tw=80
 
 "set ai "Auto indent
 "set si "Smart indent
@@ -146,6 +145,8 @@ noremap! <C-h> <C-w>
 imap <C-BS> <C-W>
 
 
+"rustfmt
+let g:rustfmt_autosave = 1
 " Highlight
 "let g:go_highlight_functions = 1  
 "let g:go_highlight_methods = 1  
