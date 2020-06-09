@@ -100,6 +100,7 @@ let g:cpp_class_decl_highlight = 1
 " highlight posix functions
 let g:cpp_posix_standard = 1
 let g:cpp_simple_highlight = 1
+let g:coc_disable_startup_warning = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => Vim settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
