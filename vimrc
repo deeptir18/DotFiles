@@ -25,13 +25,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'godlygeek/tabular'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 "Plug 'inkarkat/vim-spellcheck'
 "Plug 'kien/rainbow_parentheses.vim'
+"Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
 Plug 'lervag/vimtex'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/html5-syntax.vim'
@@ -42,6 +43,8 @@ Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'kamwitsta/nordisk'
 Plug 'cloud-oak/vim-colors-alchemy'
 Plug 'dracula/vim'
+Plug 'preservim/nerdtree'
+Plug 'altercation/vim-colors-solarized'
 
 """A lot of this is from frank! thanks frank
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,7 +57,7 @@ filetype plugin indent on    " required
 set background=dark
 set t_Co=16
 let g:solarized_termtrans = 1
-let g:solarized_termcolors=16
+let g:solarized_termcolors=256
 "colorscheme solarized
 colorscheme nord
 au BufNewFile,BufRead,BufReadPost *.tex setlocal spell spelllang=en_us
@@ -86,6 +89,19 @@ let NERDTreeDirArrows = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => c++ settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile *.pde,*.ino set filetype=c++
+"highlighting of class scope
+let g:cpp_class_scope_highlight = 1
+"highlighting of member variables
+let g:cpp_member_variable_highlight = 1
+"highlighting of class names in declarations
+let g:cpp_class_decl_highlight = 1
+" highlight posix functions
+let g:cpp_posix_standard = 1
+let g:cpp_simple_highlight = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => Vim settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -114,7 +130,7 @@ set incsearch
 " No sounds! omg this is great
 set noerrorbells
 set novisualbell
-set tm=500
+set tm=80
 
 " Linebreak on 500 characters
 set lbr
