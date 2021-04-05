@@ -54,11 +54,11 @@ call plug#end()
 syntax enable
 filetype plugin indent on    " required
 set background=dark
-set t_Co=16
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
-colorscheme solarized
-"colorscheme nord
+set t_Co=256
+"let g:solarized_termtrans = 1
+"let g:solarized_termcolors=256
+"colorscheme solarized
+colorscheme nord
 au BufNewFile,BufRead,BufReadPost *.tex setlocal spell spelllang=en_us
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline (powerline)
