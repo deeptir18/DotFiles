@@ -31,7 +31,7 @@ source ~/.zshrc
 
 # install tmux plugins
 # start a server but don't attach to it
-source ~/.tmux.conf
+# source ~/.tmux.conf
 tmux start-server
 # create a new session but don't attach to it either
 tmux new-session -d
