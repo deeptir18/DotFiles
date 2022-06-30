@@ -26,8 +26,8 @@ source $HOME/.cargo/env
 rustup default nightly
 
 # source
-source ~/.bashrc
-source ~/.zshrc
+#source ~/.bashrc
+#source ~/.zshrc
 
 # install tmux plugins
 # start a server but don't attach to it
