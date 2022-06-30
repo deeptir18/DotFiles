@@ -28,6 +28,9 @@ rustup default nightly
 # source
 #source ~/.bashrc
 #source ~/.zshrc
+git config --global core.editor "vim"
+git config --global user.name "Deepti Raghavan"
+git config --global user.name "deeptir@cs.stanford.edu"
 
 # install tmux plugins
 # start a server but don't attach to it
@@ -39,3 +42,4 @@ rustup default nightly
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 # killing the server is not required, I guess
 #tmux kill-server
+
