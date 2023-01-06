@@ -41,7 +41,7 @@ Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 Plug 'kamwitsta/nordisk'
 Plug 'cloud-oak/vim-colors-alchemy'
 Plug 'dracula/vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 
@@ -202,3 +202,41 @@ map <leader>b :Build<cr>
 map <leader>r :autocmd BufWritePost * Build
 
 set backspace=2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CoC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+set cmdheight=1
+
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>r <Plug>(coc-rename)
+
+" Trigger code actions
+nmap <leader>c <Plug>(coc-codeaction-cursor)
+
+" Use K to show documentation in preview window
+nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Jump to def
+nmap <silent> <leader>e <Plug>(coc-diagnostic-info)
+nmap <silent> <leader>d <Plug>(coc-definition)
+nmap <silent> <leader>di <Plug>(coc-implementation)
+
+let g:coc_disable_startup_warning = 1
