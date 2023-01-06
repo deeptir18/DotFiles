@@ -3,6 +3,7 @@
 # install vim and zshrc settings
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+rustup add component rust-analyzer
 cp DotFiles/vimrc ~/.vimrc
 cp DotFiles/ubuntu_bashrc ~/.bashrc
 cp DotFiles/ubuntu_zshrc ~/.zshrc
