@@ -35,15 +35,10 @@ Plug 'lervag/vimtex'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/html5-syntax.vim'
 Plug 'mattn/emmet-vim' "html and css
-"Plug 'Valloric/YouCompleteMe'
 Plug 'rust-lang/rust.vim'
-Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
-Plug 'kamwitsta/nordisk'
-Plug 'cloud-oak/vim-colors-alchemy'
-Plug 'dracula/vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'arcticicestudio/nord-vim'
+Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdtree'
-Plug 'altercation/vim-colors-solarized'
 
 """A lot of this is from frank! thanks frank
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -57,8 +52,8 @@ set background=dark
 set t_Co=256
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
-colorscheme solarized
-"colorscheme nord
+"colorscheme solarized
+colorscheme nord
 au BufNewFile,BufRead,BufReadPost *.tex setlocal spell spelllang=en_us
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline (powerline)
